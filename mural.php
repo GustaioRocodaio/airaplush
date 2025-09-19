@@ -47,7 +47,7 @@ if(isset($_POST['cadastra'])){
     // Inserindo no banco de dados
     // ==========================
     if($imagem_url != ""){
-        $sql = "INSERT INTO recados (nome, descricao, preco, imagem_url) VALUES ('$nome', '$descricao', $preco, '$imagem_url')";
+        $sql = "INSERT INTO recados  (nome, descricao, preco, imagem_url) VALUES ('$nome', '$descricao', $preco, '$imagem_url')";
         mysqli_query($conexao, $sql) or die("Erro ao inserir: " . mysqli_error($conexao));
     }
 
@@ -76,6 +76,10 @@ COMPARAÇÃO COM O CÓDIGO DE "ANTIGOxCLOUDINARY"
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <a href="moderar.php">
+  <button>Ir para moderar</button>
+</a>
+
 <meta charset="utf-8"/>
 <title>Mural de Produtos</title>
 <link rel="stylesheet" href="style.css"/>
@@ -163,4 +167,5 @@ $(document).ready(function() {
     </div>
 </div>
 </body>
-</html>      
+</html>
+      
